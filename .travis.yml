@@ -2,7 +2,7 @@ sudo: required
 language: generic
 
 env:
-  - REACT_APP_API_KEY="$REACT_APP_API_KEY"
+  - REACT_APP_API_KEY=$REACT_APP_API_KEY
 
 services:
   - docker
