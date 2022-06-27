@@ -11,8 +11,8 @@ before_deploy:
   - rvm $(travis_internal_ruby) --fuzzy do ruby -S gem install faraday -v 1.10.0
 
 env:
-  global:
-    - REACT_APP_API_KEY=$REACT_APP_API_KEY
+  - REACT_APP_API_KEY=$REACT_APP_API_KEY
+
 deploy:
   provider: heroku
   api_key: $HEROKU_ACCESS_KEY
