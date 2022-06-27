@@ -12,7 +12,7 @@ before_deploy:
 
 env:
   global:
-    - $REACT_APP_API_KEY
+    - REACT_APP_API_KEY=$REACT_APP_API_KEY
 deploy:
   provider: heroku
   api_key: $HEROKU_ACCESS_KEY
