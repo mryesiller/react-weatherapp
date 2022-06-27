@@ -2,7 +2,7 @@ sudo: required
 language: generic
 
 env:
-  - NODE_ENV="development";REACT_APP_API_KEY=$REACT_APP_API_KEY
+  - NODE_ENV="development"
   - NODE_ENV="production";REACT_APP_API_KEY=$REACT_APP_API_KEY
 
 services:
