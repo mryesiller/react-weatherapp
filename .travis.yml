@@ -1,0 +1,16 @@
+sudo: required
+language: generic
+
+services:
+  - docker
+
+before_install:
+  - docker build -t mryesiller/react-weatherapp -f Dockerfile.dev .
+
+before_deploy:
+  - rvm $(travis_internal_ruby) --fuzzy do ruby -S gem install faraday -v 1.10.0
+
+deploy:
+  provider: heroku
+  api_key: $HEROKU_ACCESS_KEY
+  app: mryesiller-react-weatherapp
