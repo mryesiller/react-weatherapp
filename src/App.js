@@ -3,16 +3,16 @@ import axios from "axios"
 import "./App.css"
 import Search from "./components/search/Search"
 import Card from "./components/Card/Card"
+import api from "./ApiKey"
 
 function App() {
   const [data, setData] = useState({ weatherData: null })
-  const API_KEY = process.env.REACT_APP_API_KEY
 
   const getCity = (cityName) => {
     if (cityName) {
       axios
         .get(
-          `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API_KEY}`
+          `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${api}`
         )
         .then((response) => {
           setData({ weatherData: response.data })
