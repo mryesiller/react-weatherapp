@@ -6,7 +6,7 @@ import Card from "./components/Card/Card"
 
 function App() {
   const [data, setData] = useState({ weatherData: null })
-  const api = process.env.REACT_APP_API_KEY
+  const api = process.env.REACT_APP_API_KEY_CLIENT
 
   const getCity = (cityName) => {
     if (cityName) {
