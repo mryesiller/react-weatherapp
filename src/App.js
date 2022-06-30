@@ -17,6 +17,10 @@ function App() {
         .then((response) => {
           setData({ weatherData: response.data })
         })
+        .catch((err) => {
+          console.error(err)
+        })
+    } else {
     }
   }
 
