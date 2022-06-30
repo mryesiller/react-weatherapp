@@ -4,10 +4,9 @@ import "./App.css"
 import Search from "./components/search/Search"
 import Card from "./components/Card/Card"
 
-const api = process.env.REACT_APP_API_KEY
-
 function App() {
   const [data, setData] = useState({ weatherData: null })
+  const api = process.env.REACT_APP_API_KEY
 
   const getCity = (cityName) => {
     if (cityName) {
