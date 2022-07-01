@@ -4,11 +4,11 @@ language: generic
 env:
   - REACT_APP_API_KEY_CLIENT=$REACT_APP_API_KEY
 
-# services:
-#   - docker
+services:
+  - docker
 
-# before_install:
-#   - docker build -t mryesiller/react-weatherapp -f Dockerfile.dev .
+before_install:
+  - docker build -t mryesiller/react-weatherapp -f Dockerfile.dev .
 
 before_deploy:
   - rvm $(travis_internal_ruby) --fuzzy do ruby -S gem install faraday -v 1.10.0
