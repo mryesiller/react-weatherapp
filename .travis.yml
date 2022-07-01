@@ -3,6 +3,7 @@ language: generic
 
 env:
   - REACT_APP_API_KEY_CLIENT=$REACT_APP_API_KEY
+  - TEST_KEY=$HEROKU_TEST_KEY
 
 services:
   - docker
